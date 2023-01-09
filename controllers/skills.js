@@ -71,7 +71,7 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  req.body.bryceKnows = !!req.body.bryceKnows
+  req.body.dimiKnows = !!req.body.dimiKnows
   Skill.findByIdAndUpdate(req.params.id, req.body, {new: true})
   .then(skill => {
     res.redirect(`/skills/${req.params.id}`)
