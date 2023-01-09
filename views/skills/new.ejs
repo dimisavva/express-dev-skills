@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add a Skill</title>
+</head>
+<body>
+  <h1>Add a Skill</h1>
+  <form action="/skills" method="POST" autocomplete="off">
+    <input type="text" name="type" placeholder="language" required>
+    <input type="checkbox" checked='%IsValid%' name="dimiKnows">
+    <button type="submit">Save Skill</button>
+  </form>
+  <a href="/skills">Go Back</a>
+</body>
+</html>

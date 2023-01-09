@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= skill.type %></title>
+</head>
+<body>
+  <h1>Skills</h1>
+  <h2>Skill #<%= skill._id %></h2>
+  <h3><%= skill.type %></h3>
+  <p>Bryce knows this language: <%= skill.bryceKnows ? 'Yes' : 'No' %></p>
+  <a href="/skills/<%= skill._id %>/edit">Edit Skill</a>
+  <a href="/skills">Go Back</a>
+</body>
+</html>

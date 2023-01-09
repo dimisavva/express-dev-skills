@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Skills</h1>
+  <a href="/">Return to Home</a>
+  <ul>
+    <% skills.forEach(skill => { %>
+      <li>
+        <form 
+        action="/skills/<%= skill._id %>?_method=DELETE" 
+        class="delete-form" 
+        method="POST">
+        <button type="submit">X</button>
+        </form>
+        <a href="/skills/<%= skill._id %> "><%= skill.type %> </a>
+        -
+        <%= skill.dimiKnows ? 'Dimi knows this skill!' : 'Dimi is still learning this' %> 
+      </li>
+      /skills/<%= skill._id %> 
+    <% }) %>
+  </ul>
+  <a href="/skills/new">Add a Skill</a>
+</body>
+</html>
